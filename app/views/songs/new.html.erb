@@ -17,7 +17,7 @@
           <%= text_field_tag "title", @song.title %>
     </div>
 
-  
+
     <div class="field<%= ' field_with_errors' if @song.errors[:released].any? %>">
       <%= f.label :released, "Released", :value => "true"  %>
       <%= f.radio_button :released, true %>
