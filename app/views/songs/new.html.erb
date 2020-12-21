@@ -17,13 +17,13 @@
           <%= text_field_tag "title", @song.title %>
     </div>
 
-      <%= form.radio_button :released, "true" %>
-      <%= form.label :released, "Released" %>
-      <%= form.radio_button :released, "false" %>
-      <%= form.label :released, "Unrealeased" %>
+  
+    <div class="field<%= ' field_with_errors' if @song.errors[:released].any? %>">
+      <%= f.label :released, "Released", :value => "true"  %>
+      <%= f.radio_button :released, true %>
+      <%= f.label :released, "Unrealeased", :value => "false" %>
+      <%= f.radio_button :released, false, :checked => true %>
     </div>
-
-
 
 
     <div class="field<%= ' field_with_errors' if @song.errors[:artist_name].any? %>">
