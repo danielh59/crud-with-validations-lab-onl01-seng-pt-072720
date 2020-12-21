@@ -19,7 +19,7 @@
 
 
     <div class="field<%= ' field_with_errors' if @song.errors[:released].any? %>">
-      <%= form.label :released, "Released", :released => "true"  %>
+      <%= form.label :released, "Released" %>
       <%= form.radio_button :released, true %>
       <%= form.label :released, "Unrealeased", :value => "false" %>
       <%= form.radio_button :released, false, :checked => true %>
