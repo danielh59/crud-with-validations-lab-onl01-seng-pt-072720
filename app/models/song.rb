@@ -1,6 +1,6 @@
 class Song < ApplicationRecord
   validates :title, presence: true
-  validates :released, presence: true, inclusion: { in: [ true, false ] }
+  validates :released, inclusion: { in: [ true, false ] }
   validates :release_year, presence: true, if: -> { released == true}
   validate :release_year_valid?
   validates :artist_name, presence: true
